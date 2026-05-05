@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проверка знаний | Курс Python</title>
+    <link href="https://googleapis.com" rel="stylesheet">
+     <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+<nav>
+    <a href="Untitled-1.html">Главная</a>
+    <a href="Untitled-1.html">Видео</a>
+    <a href="quiz.html"><b>Проверка знаний</b></a>
+    <a href="profile.html">Личный кабинет</a>
+</nav>
+
+<header>
+    <h1>Проверка знаний</h1>
+    <p>Проверь, как ты усвоил материал по созданию чат-ботов</p>
+</header>
+
+<div class="container">
+    <form id="quizForm">
+        <div class="question">
+            <p><b>1. С помощью какого бота в Telegram можно создать нового бота и получить токен?</b></p>
+            <label><input type="radio" name="q1" value="correct"> @id199142634 (@BotFather)</label>
+            <label><input type="radio" name="q1" value="wrong"> @ControllerBot</label>
+            <label><input type="radio" name="q1" value="wrong"> @id51682336 (@MyBot)</label>
+        </div>
+
+        <div class="question">
+            <p><b>2. Какая библиотека является асинхронной для написания ботов?</b></p>
+            <label><input type="radio" name="q2" value="wrong"> telebot</label>
+            <label><input type="radio" name="q2" value="correct"> aiogram</label>
+            <label><input type="radio" name="q2" value="wrong"> pandas</label>
+        </div>
+
+        <div class="question">
+            <p><b>3. Что такое API Token?</b></p>
+            <label><input type="radio" name="q3" value="wrong"> Имя бота</label>
+            <label><input type="radio" name="q3" value="correct"> Уникальный «ключ» для управления ботом</label>
+            <label><input type="radio" name="q3" value="wrong"> Ссылка на аватарку бота</label>
+        </div>
+
+        <button type="button" onclick="calculateResult()">Проверить ответы</button>
+    </form>
+    <div
+Error 404 (Not Found)!!1
+googleapis.com
+
+
+id="result"></div>
+</div>
+
+<script>
+    function calculateResult() {
+        const form = document.getElementById('quizForm');
+        let score = 0;
+        const total = 3;
+
+        const answers = new FormData(form);
+        for (let value of answers.values()) {
+            if (value === 'correct') score++;
+        }
+
+        const resultDiv = document.getElementById('result');
+        resultDiv.innerHTML = `Твой результат: ${score} из ${total}`;
+        
+        if(score === total) {
+            resultDiv.style.color = "#28a745";
+            resultDiv.innerHTML += " — Отлично! Ты настоящий прораб ботов! 🤖";
+        } else {
+            resultDiv.style.color = "#ffc107";
+            resultDiv.innerHTML += " — Неплохо, но можно повторить теорию.";
+        }
+    }
+</script>
+
+</body>
+</html>

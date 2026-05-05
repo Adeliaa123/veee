@@ -1,0 +1,231 @@
+:root {
+    --light-blue: #a2d2ff;
+    --gray: #6c757d;
+    --light-gray: #f8f9fa;
+    --white: #ffffff;
+    --dark: #333;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--light-gray);
+    margin: 0;
+    color: var(--dark);
+}
+
+/* Для страницы «Личный кабинет» */
+nav {
+    background: var(--white);
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: var(--gray);
+    font-family: 'Lato', sans-serif;
+}
+
+.profile-container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: var(--white);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.profile-header {
+    background: var(--light-blue);
+    padding: 40px;
+    text-align: center;
+    color: var(--dark);
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    background: var(--white);
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+}
+
+.profile-body {
+    padding: 30px;
+}
+
+.progress-section {
+    margin-top: 20px;
+}
+
+.progress-bar {
+    background: #e9ecef;
+    border-radius: 10px;
+    height: 25px;
+    width: 100%;
+    margin: 10px 0;
+    overflow: hidden;
+}
+
+.progress-fill {
+    background: var(--light-blue);
+    height: 100%;
+    width: 65%; /* Здесь задаётся прогресс */
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    line-height: 25px;
+    font-weight: bold;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.stat-card {
+    background: var(--light-gray);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.stat-card span {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--light-blue);
+}
+
+/* Для страницы «Проверка знаний» */
+header {
+    background-color: var(--light-blue);
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 30px auto;
+    background: var(--white);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.question {
+    margin-bottom: 25px;
+    padding: 15px;
+    border-left: 5px solid var(--light-blue);
+    background: #fdfdfd;
+}
+
+h2 { color: var(--dark); }
+
+label {
+    display: block;
+    margin: 10px 0;
+    cursor: pointer;
+    font-family: 'Lato', sans-serif;
+}
+
+button {
+    background-color: var(--light-blue);
+    color: var(--dark);
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #8ec0ef;
+    transform: translateY(-2px);
+}
+
+#result {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #28a745;
+}
+
+/* Для главной страницы */
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2em;
+    opacity: 0.9;
+}
+
+.intro-text {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.video-section {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #eee;
+    margin-top: 30px;
+}
+
+.video-placeholder {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    color: #777;
+}
+
+.btn-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: var(--light-blue);
+    color: var(--dark);
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #8ec0ef;
+    transform: translateY(-2px);
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    color: var(--gray);
+    font-size: 0.9em;
+}
